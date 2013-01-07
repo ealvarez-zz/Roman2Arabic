@@ -7,15 +7,15 @@ class Roman2ArabicTest(unittest.TestCase):
     def setUp(self):
         self.roman_2_arabic = Roman2Arabic()
     
-    def test_single_non_roman_chars_as_input(self):    
+    def test_single_non_roman_chars(self):    
         
-        non_roman_chars = ["T", "i", 3]
+        non_roman_chars = ["T", "i", "K", 3, "p", 5, "8"]
         
-        for invalid_char in non_roman_chars:
-            self.assertRaises(InvalidRomanNumberException, self.roman_2_arabic.transform, invalid_char)
+        for expected_invalid_char in non_roman_chars:
+            self.assertRaises(InvalidRomanNumberException, self.roman_2_arabic.transform, expected_invalid_char)
             
             
-    def test_single_roman_chars_as_input(self):
+    def test_single_roman_chars(self):
         
         # Arrange
         roman_chars = ["I", "V", "X", "L", "C", "D", "M"]
