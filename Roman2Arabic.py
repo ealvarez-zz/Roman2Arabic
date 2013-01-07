@@ -11,7 +11,6 @@ class Roman2Arabic(object):
     def __init__(self):
         pass
     
-    
     def transform(self, roman_number):
         
         if(not self._is_roman(roman_number)):
@@ -26,11 +25,7 @@ class Roman2Arabic(object):
         roman_chars = self.roman_values.keys()
         return (char in roman_chars)
 
-class Roman2ArabicException(Exception):
-    pass
-
-
-class InvalidRomanNumberException(Roman2ArabicException):
+class InvalidRomanNumberException(Exception):
     
     def __init__(self, value):
         

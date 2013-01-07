@@ -22,11 +22,9 @@ class Roman2ArabicTest(unittest.TestCase):
         actual_values = []
         expected_value = [1, 5, 10, 50, 100, 500, 1000]
         
-        
         # Act
         [actual_values.append(self.roman_2_arabic.transform(char)) for char in roman_chars]
         actual_values.sort()
-        
         
         # Assert
         self.assertSequenceEqual(actual_values, expected_value)
