@@ -13,15 +13,15 @@ class Roman2Arabic(object):
     
     def transform(self, roman_number):
         
-        if(not self._is_roman(roman_number)):
+        if(not self.is_roman(roman_number)):
             raise InvalidRomanNumberException(roman_number)
         else:
-            return self._getValue(roman_number)
+            return self._get_value(roman_number)
     
-    def _getValue(self, roman):
+    def _get_value(self, roman):
         return self.roman_values[roman]
 
-    def _is_roman(self, char):
+    def is_roman(self, char):
         roman_chars = self.roman_values.keys()
         return (char in roman_chars)
 
